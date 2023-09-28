@@ -16,6 +16,7 @@ const NavbarActions = () => {
 
   const router = useRouter();
   const cart = useCart();
+
   if (!isMounted) {
     return null;
   }

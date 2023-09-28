@@ -8,8 +8,8 @@ import { useRouter } from "next/navigation";
 import Currency  from "@/components/ui/currency";
 import IconButton  from "@/components/ui/icon-button";
 import usePreviewModal from "@/hooks/use-preview-modal";
-import { Product } from "@/types";
 import useCart from "@/hooks/use-cart";
+import { Product } from "@/types";
 
 interface ProductCard {
   data: Product
@@ -18,8 +18,8 @@ interface ProductCard {
 const ProductCard: React.FC<ProductCard> = ({
   data
 }) => {
-  const cart = useCart();
   const previewModal = usePreviewModal();
+  const cart = useCart();
   const router = useRouter();
 
   const handleClick = () => {
