@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
         <div className="text-neutral-950">
           <h2>
-            git Tên công ty: UNIQLO VIETNAM
+            Tên công ty: UNIQLO VIETNAM
             CO., LTD
           </h2>
           <h2>

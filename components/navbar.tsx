@@ -9,18 +9,13 @@ import Image from "next/image";
 const Navbar = async () => {
   const categories = await getCategories();
 
-  return ( 
+  return (
     <div className="border-b">
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
           <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">
-              <Image
-                src='/uniquo.png'
-                alt=""
-                width={100}
-                height={100}
-              />
+              <Image src="/uniquo.png" alt="" width={100} height={100} />
             </p>
           </Link>
           <MainNav data={categories} />
@@ -30,5 +25,5 @@ const Navbar = async () => {
     </div>
   );
 };
- 
+
 export default Navbar;
