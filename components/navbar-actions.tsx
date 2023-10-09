@@ -1,6 +1,6 @@
 "use client";
 
-import { ShoppingBag } from "lucide-react";
+import { Heart, Search, ShoppingCart, User2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -20,20 +20,38 @@ const NavbarActions = () => {
   if (!isMounted) {
     return null;
   }
-
-  return ( 
+  return (
     <div className="ml-auto flex items-center gap-x-4">
-      <Button onClick={() => router.push('/cart')} className="flex items-center rounded-full bg-black px-4 py-2">
-        <ShoppingBag
-          size={20}
-          color="white"
-        />
-        <span className="ml-2 text-sm font-medium text-white">
+      {/* <Button
+        onClick={() => router.push("/")}
+        className="flex items-center px-2 bg-white"
+      >
+        <Search size={24} color="black" />
+      </Button>
+      <Button
+        onClick={() => router.push("/")}
+        className="flex items-center px-2 bg-white"
+      >
+        <User2 size={24} color="black" />
+      </Button>
+      <Button
+        onClick={() => router.push("/")}
+        className="flex items-center px-2 bg-white"
+      >
+        <Heart size={24} color="black" />
+      </Button> */}
+      <Button
+        onClick={() => router.push("/cart")}
+        className="flex items-center px-2 bg-white"
+      >
+        <ShoppingCart size={24} color="black" />
+
+        <span className="ml-2 text-sm font-medium text-black">
           {cart.items.length}
         </span>
       </Button>
     </div>
   );
-}
- 
+};
+
 export default NavbarActions;
